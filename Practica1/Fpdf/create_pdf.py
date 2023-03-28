@@ -30,9 +30,10 @@ def create_pdf(data):
     pdf.ln(140)
 
     pdf.set_font_size(14)
-    pdf.cell(w=60, h=15, txt='Interfaz', border=1, align='C', fill=False)
-    pdf.cell(w=60, h=15, txt='Entrada', border=1, align='C', fill=False)
-    pdf.cell(w=60, h=15, txt='Salida', border=1, align='C', fill=False)
+    pdf.cell(w=45, h=15, txt='Interfaz', border=1, align='C', fill=False)
+    pdf.cell(w=45, h=15, txt='Entrada', border=1, align='C', fill=False)
+    pdf.cell(w=45, h=15, txt='Salida', border=1, align='C', fill=False)
+    pdf.cell(w=45, h=15, txt='Estado', border=1, align='C', fill=False)
 
     pdf.set_font_size(10)
 
@@ -41,9 +42,10 @@ def create_pdf(data):
         if max_results == 5:
             break
         pdf.ln()
-        pdf.cell(w=60, h=15, txt=f'{interfaz[0]}', border=1, align='C', fill=False)
-        pdf.cell(w=60, h=15, txt=f'{interfaz[1]}', border=1, align='C', fill=False)
-        pdf.cell(w=60, h=15, txt=f'{interfaz[2]}', border=1, align='C', fill=False)
+        pdf.cell(w=45, h=15, txt=f'{interfaz[0]}', border=1, align='C', fill=False)
+        pdf.cell(w=45, h=15, txt=f'{interfaz[1]}', border=1, align='C', fill=False)
+        pdf.cell(w=45, h=15, txt=f'{interfaz[2]}', border=1, align='C', fill=False)
+        pdf.cell(w=45, h=15, txt=f'{interfaz[3]}', border=1, align='C', fill=False)
         max_results += 1
 
     pdf.output(f'report-{fecha_actual}.pdf')

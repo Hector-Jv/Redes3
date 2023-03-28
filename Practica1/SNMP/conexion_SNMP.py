@@ -7,8 +7,12 @@ def conexion_snmp(dispositivo):
     datos = {}
     interfaces = []
 
+    # Información del agente
     info_agente = get_snmp.consulta_snmp(dispositivo["comunidad"], dispositivo["ip"], dispositivo["puerto"], '1.3.6.1.2.1.1.1.0')
+    # Correo
     info_contacto = get_snmp.consulta_snmp(dispositivo["comunidad"], dispositivo["ip"], dispositivo["puerto"], '1.3.6.1.2.1.1.4.0')
+
+    #Interfaces
     for i in range(1, 4):
         interfaz = []
         info_interfaces = get_snmp.consulta_snmp(dispositivo["comunidad"], dispositivo["ip"], dispositivo["puerto"], f'1.3.6.1.2.1.2.2.1.2.{i}')
@@ -17,6 +21,11 @@ def conexion_snmp(dispositivo):
         interfaz.append(info_interfaces[2])
         info_interfaces = get_snmp.consulta_snmp(dispositivo["comunidad"], dispositivo["ip"], dispositivo["puerto"], f'1.3.6.1.2.1.2.2.1.16.{i}')
         interfaz.append(info_interfaces[2])
+        info_interfaces = get_snmp.consulta_snmp(dispositivo["comunidad"], dispositivo["ip"], dispositivo["puerto"], f'1.3.6.1.2.1.2.2.1.8.{i}')
+        if info_interfaces[2] == "1":
+            interfaz.append("Up")
+        else:
+            interfaz.append("Down")
         interfaces.append(tuple(interfaz))
 
     datos["sistema_operativo"] = info_agente[2]
