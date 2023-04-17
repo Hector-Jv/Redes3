@@ -14,9 +14,9 @@ def create_pdf(data):
     pdf.text(x=55, y=40, txt='Jaime Villanueva Héctor Israel 4CM14')
 
     if data["sistema_operativo"] == "Windows 8.1":
-        pdf.image('Fpdf/img/windows8-1.jpg', x=130, y=75, w=50, h=30)
+        pdf.image('GenerarPDF/img/windows8-1.jpg', x=130, y=75, w=50, h=30)
     else:
-        pdf.image('Fpdf/img/ubuntu.png', x=140, y=65, w=40, h=40)
+        pdf.image('GenerarPDF/img/ubuntu.png', x=140, y=65, w=40, h=40)
 
     pdf.text(x=30, y=60, txt='Información del inventario')
     pdf.set_font('Arial', '', 10)

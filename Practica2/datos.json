@@ -1,13 +1,6 @@
 {
     "dispositivos": [
         {
-            "nombre": "YoUbuntu",
-            "comunidad": "JaimeVillanuevaHectorIsrael",
-            "version": "1",
-            "puerto": "161",
-            "ip": "192.168.0.119"
-        },
-        {
             "nombre": "LizbethPantoja",
             "comunidad": "LizbethPantojaRodriguez",
             "version": "1",
@@ -20,6 +13,13 @@
             "version": "1",
             "puerto": "161",
             "ip": "192.168.0.120"
+        },
+        {
+            "nombre": "IsraelPC_Ubuntu",
+            "comunidad": "JaimeVillanuevaHectorIsrael",
+            "version": "1",
+            "puerto": "161",
+            "ip": "localhost"
         }
     ]
 }

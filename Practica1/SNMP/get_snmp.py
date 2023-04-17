@@ -16,7 +16,6 @@ def consulta_snmp(comunidad, host, puerto, oid):
         print('%s at %s' % (error_status.prettyPrint(), error_index and var_binds[int(error_index) - 1][0] or '?'))
     else:
         for var_bind in var_binds:
-            print(var_bind)
             var_b = (' = '.join([x.prettyPrint() for x in var_bind]))
             resultado = var_b.split()
 

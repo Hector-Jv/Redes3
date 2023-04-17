@@ -1,4 +1,4 @@
-from Fpdf.create_pdf import create_pdf
+from GenerarPDF.create_pdf import create_pdf
 from SNMP import get_snmp
 
 
@@ -9,6 +9,7 @@ def conexion_snmp(dispositivo):
 
     # Información del agente
     info_agente = get_snmp.consulta_snmp(dispositivo["comunidad"], dispositivo["ip"], dispositivo["puerto"], '1.3.6.1.2.1.1.1.0')
+    
     # Correo
     info_contacto = get_snmp.consulta_snmp(dispositivo["comunidad"], dispositivo["ip"], dispositivo["puerto"], '1.3.6.1.2.1.1.4.0')
     # Número de interfaces
