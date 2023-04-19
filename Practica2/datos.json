@@ -1,25 +1,26 @@
 {
     "dispositivos": [
         {
-            "nombre": "LizbethPantoja",
-            "comunidad": "LizbethPantojaRodriguez",
-            "version": "1",
-            "puerto": "161",
-            "ip": "192.168.0.101"
-        },
-        {
-            "nombre": "LizbethPantajoWindows",
-            "comunidad": "ComunidadASRWin",
-            "version": "1",
-            "puerto": "161",
-            "ip": "192.168.0.120"
-        },
-        {
-            "nombre": "IsraelPC_Ubuntu",
+            "nombre": "IsraelPC",
             "comunidad": "JaimeVillanuevaHectorIsrael",
-            "version": "1",
             "puerto": "161",
-            "ip": "localhost"
+            "ip": "172.100.77.116",
+            "activo": false
+        },
+        {
+            "nombre": "Pruebaxxxx",
+            "comunidad": "lalala",
+            "puerto": "0",
+            "ip": "15",
+            "activo": false
+        },
+        {
+            "nombre": "Liz",
+            "comunidad": "ComunidadASR",
+            "puerto": "161",
+            "ip": "172.100.93.2",
+            "activo": false,
+            "proceso": null
         }
     ]
 }
