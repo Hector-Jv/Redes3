@@ -8,17 +8,18 @@
             "activo": false
         },
         {
-            "nombre": "Pruebaxxxx",
-            "comunidad": "lalala",
-            "puerto": "0",
-            "ip": "15",
-            "activo": false
-        },
-        {
             "nombre": "Liz",
             "comunidad": "ComunidadASR",
             "puerto": "161",
             "ip": "172.100.93.2",
+            "activo": false,
+            "proceso": null
+        },
+        {
+            "nombre": "Israel",
+            "comunidad": "JaimeVillanuevaHectorIsrael",
+            "puerto": "161",
+            "ip": "127.0.0.1",
             "activo": false,
             "proceso": null
         }

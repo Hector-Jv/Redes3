@@ -1,10 +1,7 @@
 from fpdf import FPDF
-import datetime
-import random
 
 
 def create_pdf(data):
-    fecha_actual = datetime.date.today()
     pdf = FPDF(orientation='P', unit='mm', format='A4')
 
     pdf.add_page()
@@ -21,11 +18,11 @@ def create_pdf(data):
     pdf.text(x=35, y=80, txt=f'Nombre de dispositivo:  {data["dispositivo"]}')
     pdf.text(x=35, y=90, txt=f'Contacto:  {data["correo_contacto"]}')
 
-    pdf.image(f'{data["usuario"]}1.png', x=130, y=75, w=50, h=30)
-    pdf.image(f'{data["usuario"]}2.png', x=130, y=95, w=50, h=30)
-    pdf.image(f'{data["usuario"]}3.png', x=130, y=115, w=50, h=30)
-    pdf.image(f'{data["usuario"]}4.png', x=130, y=135, w=50, h=30)
-    pdf.image(f'{data["usuario"]}5.png', x=130, y=155, w=50, h=30)
+    pdf.image(f'{data["nombre"]}1.png', x=15, y=120, w=50, h=30)
+    pdf.image(f'{data["nombre"]}2.png', x=75, y=120, w=50, h=30)
+    pdf.image(f'{data["nombre"]}3.png', x=135, y=120, w=50, h=30)
+    pdf.image(f'{data["nombre"]}4.png', x=15, y=170, w=50, h=30)
+    pdf.image(f'{data["nombre"]}5.png', x=135, y=170, w=50, h=30)
 
     pdf.output(f'report-{data["nombre"]}.pdf')
 

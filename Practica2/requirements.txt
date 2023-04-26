@@ -1,0 +1,7 @@
+fpdf==1.7.2
+ply==3.11
+pyasn1==0.4.8
+pycryptodomex==3.17
+pysmi==0.3.4
+pysnmp==4.4.12
+rrdtool==0.1.16
